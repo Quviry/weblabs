@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Div Table</title>
+	<style>
+		.wrapper {
+		  display: grid;
+		  grid-template-columns: 4;
+		  grid-gap: 1px;
+		  grid-auto-rows: minmax(10px, max-content);
+		  grid-auto-columns: minmax(10px, max-content);
+		}
+		.cell{
+			border: 1px solid black;
+			text-align: center;
+			padding:  5px;
+		}
+		.date {
+		  grid-column: 1;
+		  grid-row: 1 / 7;
+		  font-weight: bold;
+		}
+		.time-note {
+		  grid-column: 2;
+		  grid-row: 1;
+		}
+		.time-1 {
+		  grid-column: 2;
+		  grid-row: 2;
+		}
+		.time-2{
+		  grid-column: 2;
+		  grid-row: 3;
+		}
+		.time-3 {
+		  grid-column: 2;
+		  grid-row: 4;
+		}
+		.time-4 {
+		  grid-column: 2;
+		  grid-row: 5;
+		}
+		.time-5{
+			grid-column: 2;
+		 	grid-row: 6;
+		}
+		.weekday-1{
+			grid-column: 3;
+		 	grid-row: 1;
+		 	background: seagreen;
+		}
+		.weekday-2{
+			grid-column: 4;
+		 	grid-row: 1;
+		 	background: steelblue;
+		}
+		.lesson-1{
+			grid-column: 3/5;
+		}
+
+	</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="date cell">ПН</div>
+  <div class="time-note cell">Время</div>
+  <div class="time-1 cell">08:30 - 10:05</div>
+  <div class="time-2 cell">10:15 - 11:50</div>
+  <div class="time-3 cell">12:00 - 13:35</div>
+  <div class="time-4 cell">13:50 - 15:25</div>
+  <div class="time-5 cell">15:40 - 17:15</div>
+  <div class="weekday-1 cell">ЧС</div>
+  <div class="weekday-2 cell">ЗН</div>
+  <div class="lesson-1 cell">(сем) Элективный курс по физической культуре и спорту каф. ФВ</div>
+  <div class="lesson-1 cell">(лек) Теория вероятностей и математическая статистика 218л Горяинов В. Б.</div>
+  <div class="lesson-1 cell">(сем) Иностранный язык каф. Л2</div>
+  <div class="lesson-1 cell">(сем) Правоведение 619л</div>
+  <div class=" cell"></div>
+  <div class=" cell"></div>
+</div>
+</body>
+</html>

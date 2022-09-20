@@ -1,10 +1,84 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>CSS Usage</title>
+	<style>
+	html{
+		background-color: lightblue;
+	}
+	body{
+		background-color: aliceblue;
+		font-size: 16px;
+		border-radius: 10px;
+		padding: 20px;
+	}
+		h1{
+			font-size: 16px;
+		}
+		p > code{
+			background: peachpuff;
+			display: inline;
+			border-radius: 5 px;
+			font-family: Courier, monospace;
+			border: 1px solid black;
+			padding: 0 5px;
+			overflow: auto;
+			
+		}
+		code{
+			display: block;
+		}
+		code > pre{
+			background: peachpuff;
+			padding: 10px 15px;
+			border-radius: 5px;
+			border: 2px solid beige;
+		}
+		pre{
+			background: lightgrey;
+			padding: 10px 15px;
+			border-radius: 5px;
+		}
+		.basic-command{
+			font-weight: bold;
+		}
+		.warning{
+			font-weight: bold;
+		}
+		.extra{
+			font-style: italic;
+		}
+	</style>
 </head>
 <body>
+<h1>NAME</h1>
+<p>git-merge - Join two or more development histories together</p>
 
+<h1>SYNOPSIS</h1>
+<pre><span class="basic-command">git merge</span> [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]
+	[--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]]
+	[--[no-]allow-unrelated-histories]
+	[--[no-]rerere-autoupdate] [-m <msg>] [-F <file>]
+	[--into-name <branch>] [<commit>…​]
+<span class="basic-command">git merge</span> (--continue | --abort | --quit)</pre>
+<h1>DESCRIPTION</h1>
+<p>Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.</p>
+
+<p>Assume the following history exists and the current branch is "<code>master</code>":</p>
+
+<code><pre>	  A---B---C topic
+	 /
+	D---E---F---G master</pre></code>
+<p>Then "<code>git merge topic</code>" will replay the changes made on the <code>topic</code> branch since it diverged from <code>master</code> (i.e., <code>E</code>) until its current commit (<code>C</code>) on top of <code>master</code>, and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes.</p>
+
+<code><pre>	  A---B---C topic
+	 /         \
+	D---E---F---G---H master</pre></code>
+<p>The second syntax ("<code>git merge --abort</code>") can only be run after the merge has resulted in conflicts. <span class="extra">git merge --abort</span> will abort the merge process and try to reconstruct the pre-merge state. However, if there were uncommitted changes when the merge started (and especially if those changes were further modified after the merge was started), <span class="extra">git merge --abort</span> will in some cases be unable to reconstruct the original (pre-merge) changes. Therefore:</p>
+
+<p><span class="warning">Warning</span>: Running git merge with non-trivial uncommitted changes is discouraged: while possible, it may leave you in a state that is hard to back out of in the case of a conflict.</p>
+
+<p>The third syntax ("<code>git merge --continue</code>") can only be run after the merge has resulted in conflicts.</p>
 </body>
 </html>

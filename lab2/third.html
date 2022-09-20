@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS6 Bootstrap</title>
+    <link href="./extra/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        margin-bottom: 40px;
+    }
+
+    main {
+        margin-top: 15px;
+    }
+
+    footer {
+        height: 40px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .my-primary {
+        background-color: #217256;
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark my-primary">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src="./extra/avatar.jpg" alt="avatar" width="150" height="150">
+            </div>
+            <div class="col-8">
+                <p>Не любой текст</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <form>
+                    <table>
+                        <tr>
+                            <th colspan="2">Форма регистрации</th>
+                        </tr>
+                        <tr>
+                            <td>Логин</td>
+                            <td><input type="text" name="login" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Пароль</td>
+                            <td><input type="password" name="password" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" name="action" value="Exit" class="btn-light btn"></td>
+                            <td><input type="submit" name="action" value="Register" class="btn-primary btn"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col-4">
+                <table class="table table-striped table-bordered table-hover">
+                    <tr>
+                        <th rowspan="8" scope="col">ПН</th>
+                        <th scope="col">Время</th>
+                        <th scope="col">ЧС</th>
+                        <th scope="col">ЗН</th>
+                    </tr>
+                    <tr>
+                        <td scope="row">08:30 - 10:05</td>
+                        <td colspan="2">(сем) Элективный курс по физической культуре и спорту каф. ФВ</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">10:15 - 11:50</td>
+                        <td colspan="2">(лек) Теория вероятностей и математическая статистика 218л Горяинов В. Б.</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">12:00 - 13:35</td>
+                        <td colspan="2">(сем) Иностранный язык каф. Л2</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">13:50 - 15:25</td>
+                        <td colspan="2">(сем) Правоведение 619л</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">15:40 - 17:15</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">17:25 - 19:00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">19:10 - 20:45</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>NAME</h1>
+                <p>git-merge - Join two or more development histories together</p>
+                <h1>SYNOPSIS</h1>
+                <pre><span class="basic-command">git merge</span> [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]
+    [--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]]
+    [--[no-]allow-unrelated-histories]
+    [--[no-]rerere-autoupdate] [-m <msg>] [-F <file>]
+    [--into-name <branch>] [<commit>…​]
+<span class="basic-command">git merge</span> (--continue | --abort | --quit)</pre>
+                <h1>DESCRIPTION</h1>
+                <p>Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.</p>
+                <p>Assume the following history exists and the current branch is "<code>master</code>":</p>
+                <code>
+                    <pre>   A---B---C topic
+     /
+    D---E---F---G master</pre></code>
+                <p>Then "<code>git merge topic</code>" will replay the changes made on the <code>topic</code> branch since it diverged from <code>master</code> (i.e., <code>E</code>) until its current commit (<code>C</code>) on top of <code>master</code>, and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes.</p>
+                <code>
+                    <pre>   A---B---C topic
+     /         \
+    D---E---F---G---H master</pre></code>
+                <p>The second syntax ("<code>git merge --abort</code>") can only be run after the merge has resulted in conflicts. <span class="extra">git merge --abort</span> will abort the merge process and try to reconstruct the pre-merge state. However, if there were uncommitted changes when the merge started (and especially if those changes were further modified after the merge was started), <span class="extra">git merge --abort</span> will in some cases be unable to reconstruct the original (pre-merge) changes. Therefore:</p>
+                <p><span class="warning">Warning</span>: Running git merge with non-trivial uncommitted changes is discouraged: while possible, it may leave you in a state that is hard to back out of in the case of a conflict.</p>
+                <p>The third syntax ("<code>git merge --continue</code>") can only be run after the merge has resulted in conflicts.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="my-primary">
+        <div class="container">
+            <p class="footer-text">Footer</p>
+        </div>
+    </footer>
+</body>
+
+</html>
