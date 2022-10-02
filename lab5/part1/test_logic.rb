@@ -8,7 +8,7 @@ require_relative 'logic'
 require 'minitest/autorun'
 
 # Do the things
-class LogicTest < Minitest::Unit::TestCase
+class LogicTest < Minitest::Test
   def test_zero
     assert y(0, 0, 1).zero?
   end
