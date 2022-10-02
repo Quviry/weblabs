@@ -4,12 +4,14 @@ GEM
     ast (2.4.2)
     docile (1.4.0)
     json (2.5.1)
+    language_server-protocol (3.17.0.1)
     minitest (5.15.0)
     minitest-rg (5.2.0)
       minitest (~> 5.0)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
+    prettier_print (0.1.0)
     rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.6.0)
@@ -26,6 +28,10 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.21.0)
       parser (>= 3.1.1.0)
+    ruby-lsp (0.3.2)
+      language_server-protocol (~> 3.17.0)
+      sorbet-runtime
+      syntax_tree (>= 3.4)
     ruby-progressbar (1.11.0)
     simplecov (0.21.2)
       docile (~> 1.1)
@@ -33,6 +39,9 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
+    sorbet-runtime (0.5.10474)
+    syntax_tree (3.6.1)
+      prettier_print
     unicode-display_width (2.3.0)
 
 PLATFORMS
@@ -43,6 +52,7 @@ DEPENDENCIES
   minitest-rg
   rake
   rubocop
+  ruby-lsp (~> 0.3.2)
   simplecov
 
 BUNDLED WITH
