@@ -14,6 +14,8 @@ class LogicTest < Minitest::Test
   end
 
   def test_one
+
+    
     assert y(0, 0.5, 1) == 1
   end
 
