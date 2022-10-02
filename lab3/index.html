@@ -4,8 +4,60 @@
 	<meta charset="utf-8">
 	<title>Обход узлов</title>
 	<script src="./scripts/script.js"></script>
+	<style>
+        .header, .footer {
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-between;
+            align-items: center;
+        }
+		.header-block::first-line{
+			background: lightgrey;
+			text-transform: capitalize;	
+		}
+		.header-element{
+			margin-top: 10px;
+		}
+		#tree{
+			border: 2px solid lightgray;
+			font-family: 'Courier New', Consolas, monospace;
+		}
+		.footer{
+			border-top: 2px solid black;
+		}
+        .header {
+            border-bottom: 2px solid black;
+        }
+	</style>
 </head>
 <body>
-	<div></div>
+	<div class="header">
+		<div class="header-block">
+			<div class="header-element">first</div>
+			<div class="header-element">second</div>
+			<div class="header-element">third</div>
+		</div>
+		<div class="header-block">
+			<div class="header-element">apple</div>
+			<div class="header-element">pear</div>
+			<div class="header-element">nut</div>
+		</div>
+		<div class="header-block">
+			<div class="header-element">zoo</div>
+			<div class="header-element">park</div>
+			<div class="header-element">river</div>
+		</div>
+	</div>
+	<p>Text before tree</p>
+	<div id="tree">
+
+	</div>
+	<p>Text after tree</p>
+	<div class="footer">
+		<div class="footer-element">Footer-note</div>
+		<div class="footer-element">Footer-link</div>
+		<div class="footer-element">Footer-note</div>
+	</div>
 </body>
 </html>
