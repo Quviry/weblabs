@@ -3,7 +3,7 @@
 require 'rake/testtask'
 
 Rake::TestTask.new(:test) do |t|
-  t.pattern = '**/test_*.rb'
+  t.pattern = 'lab5/**/test_*.rb'
 end
 
 desc 'Run tests'
