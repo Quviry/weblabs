@@ -7,10 +7,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'debug'
 gem 'minitest'
 gem 'minitest-rg'
 gem 'rake'
 gem 'rubocop'
-gem 'simplecov', require: false, group: :test
-
 gem 'ruby-lsp', '~> 0.3.2', group: :development
+gem 'simplecov', require: false, group: :test

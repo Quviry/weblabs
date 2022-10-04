@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    debug (0.2.1)
     docile (1.4.0)
     json (2.5.1)
     language_server-protocol (3.17.0.1)
@@ -48,6 +49,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  debug
   minitest
   minitest-rg
   rake
