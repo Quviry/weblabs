@@ -1,7 +1,6 @@
 all:
 	bundle exec rake
 
-
 lint:
 	bundle exec rubocop
 

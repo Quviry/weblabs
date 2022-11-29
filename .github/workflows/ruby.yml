@@ -9,9 +9,9 @@ name: Ruby
 
 on:
   push:
-    branches: [ "master", "dev" ]
+    branches: ["master", "dev"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   test:
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['2.6', '2.7', '3.0']
+        ruby-version: ['2.7', '3.0']
 
     steps:
     - uses: actions/checkout@v3
@@ -27,6 +27,9 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true 
+        bundler-cache: true
+
+    - name: Run lint
+      run: make lint
     - name: Run tests
       run: bundle exec rake --trace TESTOPTS="--rg"

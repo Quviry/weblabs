@@ -15,6 +15,7 @@ gem 'rake'
 gem 'rspec'
 gem 'rubocop'
 gem 'rubocop-minitest'
+gem 'rubocop-rails'
 gem 'rubocop-rake'
 gem 'rubocop-rspec'
 gem 'simplecov', require: false, group: :test
