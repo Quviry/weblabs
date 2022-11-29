@@ -7,8 +7,14 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'bootsnap'
 gem 'minitest'
 gem 'minitest-rg'
+gem 'rails'
 gem 'rake'
+gem 'rspec'
 gem 'rubocop'
+gem 'rubocop-minitest'
+gem 'rubocop-rake'
+gem 'rubocop-rspec'
 gem 'simplecov', require: false, group: :test
