@@ -7,7 +7,7 @@ module Scale
   end
 
   # returns scale function
-  def self.scale(size, func = @deff)
+  def self.scale(size, func = method(:deff))
     descr = 1000
     return size / (-descr..descr).map { |t| yield(1.0 * t / descr) }.max if block_given?
 

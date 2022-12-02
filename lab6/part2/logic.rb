@@ -16,6 +16,6 @@ module Integral
       iterations.times { |time| calculated += function(1.0 * time / iterations) / iterations }
       iterations *= 2
     end
-    iterations / 2
+    [calculated, iterations / 2]
   end
 end

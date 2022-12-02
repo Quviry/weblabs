@@ -15,7 +15,7 @@ module Integral
       calculated = iteration(iterations)
       iterations *= 2
     end
-    iterations / 2
+    [calculated, iterations / 2]
   end
 
   def self.iteration(iterations)

@@ -2,5 +2,5 @@
 
 require_relative 'logic'
 
-Files.post_a('/home/quviry/development/weblabs/lab7/part1/smth1.txt',
-             '/home/quviry/development/weblabs/lab7/part1/smth1.output.txt')
+Files.post_a('lab7/part1/smth1.txt',
+             'lab7/part1/smth1.output.txt')
