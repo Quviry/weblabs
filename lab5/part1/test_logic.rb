@@ -11,14 +11,14 @@ require 'minitest/autorun'
 class LogicTest < Minitest::Test
   include Logic
   def test_zero
-    assert Logic.y(0, 0, 1).zero?
+    assert Logic.calculate_y(0, 0, 1).zero?
   end
 
   def test_one
-    assert Logic.y(0, 0.5, 1) == 1
+    assert Logic.calculate_y(0, 0.5, 1) == 1
   end
 
   def test_fall
-    assert_raises(ZeroDivisionError) { Logic.y(0, 0, 0) }
+    assert_raises(ZeroDivisionError) { Logic.calculate_y(0, 0, 0) }
   end
 end

@@ -21,8 +21,8 @@ module Integral
   def self.iteration(iterations)
     calculated = 0
     # rubocop:disable Style/For
-    for a in (0..iterations) do
-      calculated += function(1.0 * a / iterations) / iterations
+    for step in (0..iterations) do
+      calculated += function(1.0 * step / iterations) / iterations
     end
     # rubocop:enable Style/For
     calculated

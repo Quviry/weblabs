@@ -9,4 +9,4 @@ x_param = gets.to_f
 z_param = gets.to_f
 r_param = gets.to_f
 
-puts "Answer :  #{Logic.y x_param, z_param, r_param}"
+puts "Answer :  #{Logic.calculate_y x_param, z_param, r_param}"

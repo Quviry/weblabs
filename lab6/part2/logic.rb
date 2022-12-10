@@ -12,8 +12,7 @@ module Integral
     calculated = 100_000
     iterations = 1
     while (answer - calculated).abs > epsilon
-      calculated = 0
-      iterations.times { |time| calculated += function(1.0 * time / iterations) / iterations }
+      calculated = (0..iterations).collect { |time| function(1.0 * time / iterations) / iterations }.reduce(0, :+)
       iterations *= 2
     end
     [calculated, iterations / 2]
