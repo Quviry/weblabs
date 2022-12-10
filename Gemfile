@@ -20,3 +20,4 @@ gem 'rubocop-rails'
 gem 'rubocop-rake'
 gem 'rubocop-rspec'
 gem 'simplecov', require: false, group: :test
+gem 'sprockets-rails', require: 'sprockets/railtie'
