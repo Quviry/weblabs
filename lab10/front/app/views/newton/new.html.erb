@@ -1,0 +1,10 @@
+<h1>Newton-Raphson square root calculator</h1>
+<p>Enter correct float greateher than zero<p>
+<%= form_tag '/square', method: :get do %>
+    <%= text_field_tag 'square', '289.0' %>
+    <p><%= radio_button_tag 'side', 'server'%> Render with server side</p>
+    <p><%= radio_button_tag 'side', 'client' %> Render with client side</p>
+    <p><%= radio_button_tag 'side', 'raw text' %> Get raw xml as html</p>
+    <p><%= radio_button_tag 'side', 'raw xml', selected=true %> Get raw xml as xml application</p>
+    <%= submit_tag "Submit", disable_with: 'Submiting...' %>
+<% end %>

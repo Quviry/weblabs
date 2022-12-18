@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <steps type="array">
+    <step type="float">1.0</step>
+    <step type="float">1.5</step>
+    <step type="float">1.4166666666666665</step>
+    <step type="float">1.4142156862745097</step>
+  </steps>
+  <value type="float">1.4142156862745097</value>
+  <errors nil="true"/>
+</hash>

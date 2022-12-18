@@ -1,0 +1,8 @@
+<h1>Newton-Raphson square root calculator</h1>
+<p>Enter correct float greateher than zero<p>
+<%= form_tag '/square.json', method: :get, remote: true, id: 'newton_form'  do %>
+    <%= text_field_tag 'square', '289.0' %>
+    <%= submit_tag "Submit", disable_with: 'Submiting...' %>
+<% end %>
+
+<div id="result"></div>

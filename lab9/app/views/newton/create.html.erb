@@ -1,0 +1,15 @@
+
+<% if @error.nil? %>
+    <h1>Value calculation steps</h1>
+    <ol>
+    <% @steps.each do |val| %>
+        <li> <%= val %> </li>
+    <% end %>
+
+    </ol>
+    <p>Response: <%= content_tag :span, @steps.last, class: 'answer' %></p>
+<% else %>
+    <h1>Error!</h1>
+    <p class="error"> <%= @error %> </p>
+<% end %>
+<%= link_to 'Back', '/' %>
