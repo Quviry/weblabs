@@ -54,6 +54,7 @@ jobs:
         bundler-cache: true
     - name: Update gems
       run: bundle install
+
     - name: Setup database
       run: bundle exec rails db:prepare
 

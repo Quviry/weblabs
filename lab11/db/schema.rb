@@ -10,5 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_11_204514) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_18_175114) do
+  create_table "newtons", force: :cascade do |t|
+    t.float "key"
+    t.json "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_newtons_on_key", unique: true
+  end
+
 end
