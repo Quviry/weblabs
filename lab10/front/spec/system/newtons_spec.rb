@@ -24,7 +24,11 @@ RSpec.describe 'Newtons' do
       page
     end
     let(:page257) { get_page 257, 'side_server' }
+    let(:page257client) { get_page 257, 'side_client' }
     let(:page256) { get_page 256, 'side_server' }
+
+    let(:page257xml) { get_page 257, 'side_raw_xml' }
+    let(:page256xml) { get_page 256, 'side_raw_xml' }
 
     it 'regular answer' do
       get_page 256, 'side_server'
@@ -33,6 +37,14 @@ RSpec.describe 'Newtons' do
 
     it 'regular difference in answer' do
       expect(page256.text).not_to eq page257.text
+    end
+
+    it 'xml difference in answer' do
+      expect(page256xml.body).not_to eq page257xml.body
+    end
+
+    it 'server/client difference in answer' do
+      expect(page257.body).not_to eq page257client.body
     end
 
     it 'get html' do

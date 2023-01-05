@@ -1,0 +1,34 @@
+<%= form_with(model: user, url: '/') do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being login </h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <% flash.each do |type, msg| %>
+    <div class="<%= type %>">
+      <%= msg %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :login, style: "display: block" %>
+    <%= form.text_field :login %>
+  </div>
+
+  <div>
+    <%= form.label :password, style: "display: block" %>
+    <%= form.password_field  :password  %>
+  </div>
+
+  </br>
+
+  <div>
+    <%= form.submit 'Login' %>
+  </div>
+<% end %>

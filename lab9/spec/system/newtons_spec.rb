@@ -27,7 +27,7 @@ RSpec.describe 'Newtons', type: :system do
       fill_in 'square', with: '-2'
       click_on 'Submit'
       sleep(1.0)
-      assert_selector '#error', text: "Error: Must be greather than zero"
+      assert_selector '#error', text: 'Error: Must be greater than zero'
     end
 
     it 'not a float value' do
@@ -35,7 +35,7 @@ RSpec.describe 'Newtons', type: :system do
       fill_in 'square', with: 'F'
       click_on 'Submit'
       sleep(1.0)
-      assert_selector '#error', text: "Error: Must be correct float"
+      assert_selector '#error', text: 'Error: Must be correct float'
     end
   end
 

@@ -1,5 +1,5 @@
 <h1>Newton-Raphson square root calculator</h1>
-<p>Enter correct float greateher than zero<p>
+<p>Enter correct float greater than zero<p>
 <%= form_tag '/square', method: :get do %>
     <%= text_field_tag 'square', '289.0' %>
     <p><%= radio_button_tag 'side', 'server'%> Render with server side</p>

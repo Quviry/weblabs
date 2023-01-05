@@ -32,7 +32,7 @@ class NewtonControllerTest < ActionDispatch::IntegrationTest
   test 'should not create newton negative' do
     post '/', params: { square: '-10' }
 
-    assert_select 'p.error', 'Must be greather than zero'
+    assert_select 'p.error', 'Must be greater than zero'
   end
 
   test 'should not create newton not a float' do

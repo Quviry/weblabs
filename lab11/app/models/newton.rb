@@ -7,7 +7,7 @@ class Newton < ApplicationRecord
   include NewtonHelper
   include ActiveModel::Serializers::Xml
 
-  validates :key, numericality: { greater_than_or_equal_to: 0 }
+  validates :key, numericality: { greater_than_or_equal_to: 0 }, uniqueness: true
 
   before_save :default_values
 

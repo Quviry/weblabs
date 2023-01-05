@@ -10,9 +10,9 @@ class NewtonController < ApplicationController
   private
 
   def argument_valid
-    @error = 'Must be greather than zero' if params[:square].to_f.negative? # not negative
+    @error = 'Must be greater than zero' if params[:square].to_f.negative? # not negative
     @error = 'Must be correct float' if Float(params[:square], exception: false).nil? # correct float conversion
-    params[:square].to_f.positive? || !Float(params[:square], exception: false)&.nonzero? # valid if zero or positive
+    params[:square].to_f.positive? || Float(params[:square], exception: false)&.zero? # valid if zero or positive
   end
 
   def load_args

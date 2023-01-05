@@ -37,7 +37,7 @@ class NewtonControllerTest < ActionDispatch::IntegrationTest
   test 'should not create newton negative' do
     get '/something.xml', params: { square: '-10' }
 
-    assert_equal Nokogiri::XML(@response.body).search("errors").children[0].content, 'Must be greather than zero'
+    assert_equal Nokogiri::XML(@response.body).search("errors").children[0].content, 'Must be greater than zero'
   end
 
   test 'should not create newton not a float' do

@@ -17,7 +17,7 @@ class NewtonController < ApplicationController
   private
 
   def argument_negative
-    @error = 'Must be greather than zero' if params[:square].to_f.negative? # not negative
+    @error = 'Must be greater than zero' if params[:square].to_f.negative? # not negative
   end
 
   def argument_actual

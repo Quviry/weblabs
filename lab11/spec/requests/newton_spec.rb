@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Newtons", type: :request do
+RSpec.describe 'Newtons', type: :request do
   describe 'GET /index' do
     it 'Correct controller' do
       get index_path
@@ -19,6 +19,10 @@ RSpec.describe "Newtons", type: :request do
     it 'Correct controller' do
       post create_path('square'), params: { square: '10' }
       expect(controller.action_name).to eq 'create'
+    end
+
+    it 'Generates new' do
+      expect { post create_path('square'), params: { square: '101' } }.to change(Newton, :count)
     end
 
     it 'Different results' do
